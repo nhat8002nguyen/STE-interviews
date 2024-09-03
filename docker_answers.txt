@@ -1,0 +1,13 @@
+What is the Docker?
+- Docker is a platform used for developing, shipping, and running applications inside lightweight, portable containers. It allows developers to package their application along with all the dependencies and libraries it needs to run, ensuring consistency across multiple environments.
+
+Why we have to use Docker?
+- We use Docker to ensure the application runs the same in different environments: testing, development and production. Docker keeps our application isolated which can run independently. Docker help use can scale up or down by increasing or decreasing the number of containers. Docker uses fewer resources than Virtual Machines as they share the same OS kernel. 
+
+How to deploy a project to production environment?
+1. Create a Dockerfile to describe how to build a docker image for our application.
+2. Build a Docker image using command `build -t image_name .`.
+3. Test docker image locally using `docker run -p local_post:container_port image name` to make sure it works. 
+4. Push the docker image to container registry like Docker Hub, AWS ECR, or a private registry using `docker push image_name` command. 
+5. Deploy the docker container using orchestration tools like Docker Compose, Kubernetes, AWS ECS.
+

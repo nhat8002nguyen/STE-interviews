@@ -1,0 +1,20 @@
+- Authentication: This is a process of verifying the identity of a user. For example, a user will give us an ID card, and we make sure the user is the one he claims to be. So, in the software, the user will enter their credentials username/password, biometrics, or two-factor authentication.
+
+- Authorization: On the other hand, this is a process of determining the access privileges, or ability to perform specific actions within a system for the authenticated users. For example, can they access some documents, or update them?
+
+- A flow of Authentication and Authorization I ever used:
+1. User Visits Login Page: The user navigates to the login page of the application.
+2. User Enters Credentials: The user inputs their username and password.
+3. Authentication:
+The application sends these credentials to the server.
+The server verifies the credentials against the user database.
+If valid, the server generates JWT (JSON Web Token) and returns it to the client.
+4. Token Storage:
+The client (web browser or mobile app) stores this token for subsequent requests (e.g., in local storage or a cookie).
+5. Authorization:
+The user attempts to access a protected resource or perform an action.
+The client includes the token in the request headers.
+The server validates this token to verify the user's identity.
+The server checks the user's permissions based on their role or access level.
+If the user is authorized, the server grants access to the resource or performs the action.
+
