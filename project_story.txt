@@ -1,1 +1,15 @@
+My most proud project involved developing key features for a promotion system in an e-commerce platform. The main focus was on improving voucher usage management. Here’s a breakdown:
+
+1. Grouping Vouchers: Created a group object to ensure vouchers in the same group couldn't be used together.
+
+2. Performance Optimization:
+- Hashmap: Utilized Hashmap to map voucher codes to data for O(1) access during validation.
+- Preprocessing: Indexed vouchers based on groups for faster lookups.
+- Caching: Leveraged in-memory caching (e.g., Redis) to store pre-calculated logic, reducing expensive database queries. Implemented cache invalidation on configuration changes.
+- Concurrent Processing: Divided the validation process into smaller tasks (e.g., voucher group checks, price validation, product-specific validation) and used concurrent threads/goroutines for faster performance.
+- Database Indexing: Indexed frequently queried fields in MongoDB for faster data retrieval.
+
+3. Asynchronous Job Handling: Utilized background workers to handle batch voucher creation asynchronously, with job status updates and retry mechanisms to mitigate errors like network interruptions or unintended human actions.
+
+This approach significantly improved the performance and reliability of the promotion system, ensuring seamless user experience.
 
